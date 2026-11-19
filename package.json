@@ -1,0 +1,7 @@
+{
+  "name": "ruslan-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "node server.mjs", "start": "node server.mjs", "check": "node --check dist/app.js && node --check dist/bird.js && node --check dist/cursor.js && node --check dist/projects.js && node --check dist/black-hole.js" }
+}

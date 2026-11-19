@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf9f6">
+  <meta name="description" content="Hi, I'm Ruslan Shevchuk. Computer science student at UAlbany, building open-source software and native desktop experiences.">
+  <meta property="og:title" content="Ruslan Shevchuk | A little corner of the internet">
+  <meta property="og:description" content="Software, open source, and a little curiosity. Explore my projects and get to know me.">
+  <meta property="og:type" content="website">
+  <title>Ruslan Shevchuk | Software Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/pixelify-sans.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="work.css">
+  <script src="app.js" defer></script>
+  <script src="bird.js" defer></script>
+  <script src="cursor.js" defer></script>
+  <script src="projects.js" defer></script>
+  <script src="black-hole.js" defer></script>
+</head>
+<body>
+  <canvas id="cursor-trail" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Ruslan, home">rs<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home" data-page="home" aria-current="page">home</a>
+        <a href="#work" data-page="work">work</a>
+        <a href="#about" data-page="about">about</a>
+        <a href="assets/Ruslan-Shevchuk-Resume.pdf" target="_blank" rel="noopener">resume</a>
+      </nav>
+      <a class="header-contact" href="mailto:rshevchuk2007@gmail.com">say hello</a>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="page home-page" id="home" aria-labelledby="home-title">
+        <div class="hello-copy">
+          <h1 id="home-title" tabindex="-1">hi, I’m Ruslan<span class="period">.</span></h1>
+          <p class="intro">a computer science student trying to do something fun.</p>
+          <a class="primary-link" href="#work">explore my work</a>
+        </div>
+        <div class="bird-scene">
+          <canvas id="flight-bird" width="600" height="400" role="img" aria-label="An indigo bird flapping its wings in a continuous flight loop.">An indigo bird in flight, drawn entirely in code.</canvas>
+        </div>
+        <div class="home-bottom">
+          <a class="building-link" href="#work"><img src="assets/refract-icon.png" width="24" height="24" alt=""><span>currently building <strong>RefractMC</strong></span></a>
+          <div class="social-links" aria-label="Find me online">
+            <a href="https://github.com/ShevRuslan1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/shevruslan1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:rshevchuk2007@gmail.com">Email</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page inner-page work-page" id="work" aria-labelledby="work-title">
+        <div class="work-heading">
+          <h1 id="work-title" tabindex="-1">Things I’ve made.</h1>
+          <p>A few things I’ve built and contributed to. Take a look around :)</p>
+          <canvas class="work-black-hole" id="work-black-hole" width="800" height="600" role="img" aria-label="An animated black hole with a golden Unicode accretion disk, curved light above its dark center, and a warped grid below.">A black hole animated with Unicode characters.</canvas>
+        </div>
+        <h2 class="work-section-title" id="projects-heading">Projects</h2>
+        <div class="project-explorer">
+          <div class="project-picker" aria-label="Choose a project" hidden>
+            <button id="tab-refract" type="button" data-project="refract"><span class="project-star" aria-hidden="true">✦</span><span>RefractMC<small>Desktop app</small></span></button>
+            <button id="tab-monitor" type="button" data-project="monitor"><span class="project-star" aria-hidden="true">✦</span><span>System Monitor<small>macOS app</small></span></button>
+            <button id="tab-modrex" type="button" data-project="modrex"><span class="project-star" aria-hidden="true">✦</span><span>Modrex<small>Mod launcher</small></span></button>
+          </div>
+          <div class="project-stage">
+            <article class="project-panel" id="project-refract" aria-labelledby="refract-name">
+              <a class="preview-window" href="https://refractmc.net" target="_blank" rel="noopener noreferrer" aria-label="Visit RefractMC">
+                <div class="preview-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>desktop app</span><span></span></div>
+                <img src="assets/refract-library.webp" alt="RefractMC launcher with a library of Minecraft instances." width="1440" height="770" loading="lazy">
+              </a>
+              <div class="project-description"><h3 id="refract-name">RefractMC</h3><p>A modern, open-source Minecraft launcher. One home for your instances, mods, and next adventure, on Windows, macOS, and Linux.</p><ul class="tech-list" aria-label="RefractMC technologies"><li>React</li><li>TypeScript</li><li>Tauri</li><li>Rust</li></ul><div class="project-links"><a href="https://refractmc.net" target="_blank" rel="noopener noreferrer">visit website</a><a href="https://github.com/RefractMC/Refract_MC" target="_blank" rel="noopener noreferrer">view source</a></div>
+                <details><summary>more about the build</summary><div class="detail-copy"><dl class="project-stats"><div><dt>downloads</dt><dd>8,000+</dd></div><div><dt>daily active users</dt><dd>300+</dd></div><div><dt>platforms</dt><dd>3</dd></div></dl><p class="milestone-note">Project milestones from my resume.</p><p>Built cross-platform support for Vanilla, Fabric, Forge, Quilt, and NeoForge installations.</p><p>Developed the Rust/Tauri backend for authentication, Java management, backups, content updates, and server monitoring. Added HTTPS validation, redirect checks, and cryptographic file verification.</p></div></details>
+              </div>
+            </article>
+            <article class="project-panel" id="project-monitor" aria-labelledby="monitor-name">
+              <div class="preview-window source-window">
+                <div class="preview-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SystemMonitorApp.swift</span><span></span></div>
+                <div class="source-preview"><p>Built with SwiftUI</p><pre aria-label="Excerpt from SystemMonitorApp.swift"><code><span class="code-keyword">MenuBarExtra</span> {
+    <span class="code-call">MenuBarView</span>()
+        .environmentObject(theme)
+        .environmentObject(cpu)
+        .environmentObject(ram)
+        .environmentObject(network)
+} label: {
+    <span class="code-keyword">HStack</span> {
+        <span class="code-call">Image</span>(systemName: <span class="code-string">"cpu"</span>)
+        <span class="code-call">Text</span>(<span class="code-string">"\(Int(cpu.usage))%"</span>)
+            .font(.system(size: <span class="code-keyword">11</span>))
+    }
+}</code></pre></div>
+              </div>
+              <div class="project-description"><h3 id="monitor-name">System Monitor</h3><p>CPU, memory, and network activity at a glance. A native macOS app with customizable cards and a menu-bar widget.</p><ul class="tech-list" aria-label="System Monitor technologies"><li>Swift</li><li>SwiftUI</li><li>WidgetKit</li></ul><div class="project-links"><a href="https://github.com/ShevRuslan1/MacOS-System-Monitor" target="_blank" rel="noopener noreferrer">view source</a></div><details><summary>more about the build</summary><div class="detail-copy"><p>Low-level macOS APIs collect processor, memory, and network data. A protocol-oriented architecture keeps monitoring logic separate from reusable SwiftUI components.</p><p>The preview above is an excerpt from the app’s SwiftUI source.</p></div></details></div>
+            </article>
+            <article class="project-panel" id="project-modrex" aria-labelledby="modrex-name">
+              <a class="preview-window modrex-preview" href="https://modrex.net" target="_blank" rel="noopener noreferrer" aria-label="Visit Modrex">
+                <div class="preview-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>mod launcher</span><span></span></div>
+                <img src="assets/modrex-browse.webp" alt="Modrex showing its in-app mod browser." loading="lazy">
+              </a>
+              <div class="project-description"><h3 id="modrex-name">Modrex</h3><p>An open-source home for your game mods. Browse ModWorkshop and Nexus Mods, install mods, and launch games modded or vanilla.</p><ul class="tech-list" aria-label="Modrex platforms and integrations"><li>Windows &amp; Linux</li><li>ModWorkshop</li><li>Nexus Mods</li></ul><div class="project-links"><a href="https://modrex.net" target="_blank" rel="noopener noreferrer">visit website</a><a href="https://github.com/ShevRuslan1/modrex_translate" target="_blank" rel="noopener noreferrer">my fork</a></div></div>
+            </article>
+          </div>
+        </div>
+        <div class="work-more"><a href="https://github.com/ShevRuslan1?tab=repositories" target="_blank" rel="noopener noreferrer">all repositories on GitHub</a></div>
+        <section class="work-contact"><h2>Let’s make something.</h2><a href="mailto:rshevchuk2007@gmail.com">rshevchuk2007@gmail.com</a></section>
+      </section>
+
+      <section class="page inner-page about-page" id="about" aria-labelledby="about-title">
+        <div class="page-heading"><p class="eyebrow">the person behind the pixels</p><h1 id="about-title" tabindex="-1">a little about me.</h1></div>
+        <div class="about-intro"><div><p class="about-lead">I’m Ruslan, a computer science student at the University at Albany.</p><p>I build open-source tools and desktop apps, with a focus on making everyday interactions feel considered. I like working across the stack, from a React interface to the Rust code underneath.</p><p>Based in Albany / Warwick, New York. Currently looking for a software engineering internship.</p><a class="primary-link" href="assets/Ruslan-Shevchuk-Resume.pdf" download>download resume</a></div><figure class="portrait"><img src="assets/ruslan-github.jpg" alt="Ruslan’s GitHub profile photo" width="300" height="300" loading="lazy"><figcaption>Ruslan Shevchuk</figcaption></figure></div>
+        <div class="about-columns"><section><h2>where I’m learning</h2><div class="timeline-entry"><p class="entry-date">2025 - 2029</p><h3>University at Albany, SUNY</h3><p>BS in Computer Science<br>GPA: 3.6 / 4.0</p><p>Data structures, algorithms, databases, computer systems, and machine learning.</p><p>Member of Orange Cluster and LLC World of Computer Science.</p></div><div class="timeline-entry"><p class="entry-date">2023 - 2025</p><h3>Warwick Valley High School</h3><p>Robotics competitions, engineering events, and teaching short Java lessons to younger students.</p></div></section><section><h2>where I’m growing</h2><div class="timeline-entry"><p class="entry-date">June 2026 - present</p><h3>Software Developer</h3><p>RefractMC</p><p>Building and maintaining an open-source launcher across Windows, macOS, and Linux.</p></div><div class="timeline-entry"><p class="entry-date">October 2025 - present</p><h3>Customer Assistant</h3><p>Vans, Albany</p><p>Helping customers, coordinating with teammates, and solving problems in a busy retail environment.</p></div></section></div>
+        <section class="toolbox"><h2>my toolbox</h2><div class="tool-groups"><div><h3>languages</h3><p>Java, Python, TypeScript, Rust, Swift, HTML & CSS</p></div><div><h3>frameworks</h3><p>React, Tauri, SwiftUI, Tailwind CSS, WidgetKit, AppKit</p></div><div><h3>tools</h3><p>Git, GitHub, Node.js, pnpm, Cargo, Xcode</p></div></div></section>
+        <section class="contact-note"><h2>let’s build something.</h2><p>Have an internship opportunity, a project, or something interesting to share?</p><a href="mailto:rshevchuk2007@gmail.com">say hello</a><button id="copy-email" type="button">copy email</button><span id="copy-status" role="status"></span></section>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a href="mailto:rshevchuk2007@gmail.com">say hello <span class="footer-email">(rshevchuk2007@gmail.com)</span></a><span class="footer-signoff">a little curiosity, a lot of code.</span><div class="preferences"><button id="theme-toggle" type="button" aria-pressed="false">night mode</button><button id="motion-toggle" type="button" aria-pressed="false">pause motion</button></div></footer>
+  </div>
+</body>
+</html>
